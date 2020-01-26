@@ -1,0 +1,37 @@
+body{
+  width:100vw;
+  height:100vh;
+  margin:0px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:black;
+background-size: 1800% 1800%;
+}
+.box{
+  border-radius:25px;
+  font-size:1000%;
+  overflow:hidden;
+  margin:0px;
+  background-color:white;
+  height:80%;
+  width:80%;
+  border:10% solid white;
+  display: inline-block;
+  word-break:break-word;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.container {
+  width:620px;
+  height:620px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-row-gap:25px;
+  grid-column-gap:25px;
+}
+.box:hover{
+background-color:lightgreen;
+}

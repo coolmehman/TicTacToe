@@ -1,0 +1,90 @@
+//defer atribute needed
+var x = true;
+var clicks = 0;
+var Xwin = 0;
+var Owin = 0;
+
+document.getElementById("title").innerHTML = "Tic Tac Toe " + Xwin + ":" + Owin + "   X";
+function turnDisplay(x){
+if(x) {
+    document.getElementById("title").innerHTML = "Tic Tac Toe " + Xwin + ":" + Owin + "   X";
+}
+else {
+    document.getElementById("title").innerHTML = "Tic Tac Toe " + Xwin + ":" + Owin + "   O";
+}
+}
+
+function winCheck(x){
+  
+  var win = false;
+  var turn;
+  if(x)
+    turn = "O";
+  else
+    turn = "X";
+  console.log(turn)
+  
+  if(document.getElementById(1).innerHTML === turn && document.getElementById(2).innerHTML === turn && document.getElementById(3).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(4).innerHTML === turn && document.getElementById(5).innerHTML === turn && document.getElementById(6).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(7).innerHTML === turn && document.getElementById(8).innerHTML === turn && document.getElementById(9).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(1).innerHTML === turn && document.getElementById(4).innerHTML === turn && document.getElementById(7).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(2).innerHTML === turn && document.getElementById(5).innerHTML === turn && document.getElementById(8).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(3).innerHTML === turn && document.getElementById(6).innerHTML === turn && document.getElementById(9).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(1).innerHTML === turn && document.getElementById(5).innerHTML === turn && document.getElementById(9).innerHTML === turn) {
+    Xwin++;
+    win = true;
+  }
+  if(document.getElementById(3).innerHTML === turn && document.getElementById(5).innerHTML === turn && document.getElementById(7).innerHTML === turn) {
+    Xwin++;
+    // /\ - fix this
+    win = true;
+  }
+  console.log(win)
+  if(win) {
+    turnDisplay(x);
+    document.getElementById(1).innerHTML = ""
+    document.getElementById(2).innerHTML = ""
+    document.getElementById(3).innerHTML = ""
+    document.getElementById(4).innerHTML = ""
+    document.getElementById(5).innerHTML = ""
+    document.getElementById(6).innerHTML = ""
+    document.getElementById(7).innerHTML = ""
+    document.getElementById(8).innerHTML = ""
+    document.getElementById(9).innerHTML = ""
+  }
+  
+}
+function boxClicker(id){
+  clicks++;
+  if(x === true && document.getElementById(id).innerHTML === "") {
+    document.getElementById("title").innerHTML = "Tic Tac Toe " + Xwin + ":" + Owin + "   O";
+    x = false;
+  document.getElementById(id).innerHTML = "X"}
+  else if(x === false && document.getElementById(id).innerHTML === ""){
+    document.getElementById("title").innerHTML = "Tic Tac Toe " + Xwin + ":" + Owin + "   X";
+    x = true;
+    document.getElementById(id).innerHTML = "O";
+  }
+    else{
+      console.log("Error - func boxClicker")
+    }
+  winCheck(x);
+}

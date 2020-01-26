@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Tic Tac Toe 0:0</title>
+  </head>
+  <body id="body">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer>
+      //put a defer if it is up here
+    </script>
+    <div id="cont" class="container">
+      <div id="1" onclick="boxClicker(1)" class="box"></div>
+      <div id="2" onclick="boxClicker(2)" class="box"></div>
+      <div id="3" onclick="boxClicker(3)" class="box"></div>
+      <div id="4" onclick="boxClicker(4)" class="box"></div>
+      <div id="5" onclick="boxClicker(5)" class="box"></div>
+      <div id="6" onclick="boxClicker(6)" class="box"></div>
+      <div id="7" onclick="boxClicker(7)" class="box"></div>
+      <div id="8" onclick="boxClicker(8)" class="box"></div>
+      <div id="9" onclick="boxClicker(9)" class="box"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
